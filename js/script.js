@@ -32,12 +32,13 @@ function showData(n){
     let amount=nPages[n]
     let position=n*10
     for(let i=position; i<amount+position; i++){
+        var username = profile[i].name.replace(/ /g, ".");
         console.log(i)
         lista.innerHTML += 
         `<div class="contact-details">
         <img class="avatar" src=${profile[i].image}></img>
         <h3>${profile[i].name}</h3>
-        <span class="email">${profile[i].name}@example.com</span>
+        <span class="email">${username}@example.com</span>
         </div>
         <div class="joined-details">
         <span class="date">Joined ${profile[i]["joined"]}</span><br>
